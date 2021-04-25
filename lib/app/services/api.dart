@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_api/app/services/api_keys.dart';
+import 'package:flutter/foundation.dart';
+
+import 'api_keys.dart';
 
 enum Endpoint {
   cases,
@@ -34,5 +35,6 @@ class API {
     Endpoint.casesSuspected: 'casesSuspected',
     Endpoint.casesConfirmed: 'casesConfirmed',
     Endpoint.deaths: 'deaths',
+    Endpoint.recovered: 'recovered',
   };
 }

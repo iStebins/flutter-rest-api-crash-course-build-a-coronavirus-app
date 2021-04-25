@@ -1,8 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_api/app/services/api.dart';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
+
+import 'api.dart';
 
 class APIService {
   APIService(this.api);
@@ -46,7 +47,7 @@ class APIService {
       }
     }
     print(
-        'Request ${api.tokenUri()} failed\nResponse: ${response.statusCode} ${response.reasonPhrase}');
+        'Request $uri failed\nResponse: ${response.statusCode} ${response.reasonPhrase}');
     throw response;
   }
 
